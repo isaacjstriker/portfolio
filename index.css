@@ -33,3 +33,15 @@ body {
     font-size: 0.95em;
     margin-top: auto;
 }
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .center-text {
+        max-width: 95vw;
+        font-size: 1.2rem;
+        padding: 0 0.5rem;
+    }
+    .header {
+        font-size: 1.5rem;
+    }
+}
