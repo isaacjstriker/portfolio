@@ -1,0 +1,35 @@
+body {
+    background: black;
+    color: white;
+    margin: 0;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.header {
+    color: white;
+    text-align: center;
+    margin: 20px auto 20px;
+}
+
+.center-text {
+    max-width: 600px;
+    margin: 10px auto 20px;
+    text-align: center;
+    font-size: 1.125em;
+    border-radius: 0.5em;
+    padding: 10px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 16px 0 15px;
+    color: #aaa;
+    font-size: 0.95em;
+    margin-top: auto;
+}
