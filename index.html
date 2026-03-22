@@ -51,28 +51,21 @@
             }, []);
 
             const techStack = [
-                { name: 'iOS / Swift', icon: 'smartphone', color: 'bg-blue-500' },
-                { name: 'Expo', icon: 'tablet', color: 'bg-indigo-500' },
                 { name: 'Symfony', icon: 'layers', color: 'bg-black border border-white/20' },
                 { name: 'Laravel', icon: 'database', color: 'bg-red-500' },
-                { name: 'TypeScript', icon: 'code-2', color: 'bg-blue-600' },
+                { name: 'gin', icon: 'martini', color: 'bg-blue-600' },
+                { name: 'Expo', icon: 'atom', color: 'bg-indigo-500' },
+                { name: 'iOS / Swift', icon: 'smartphone', color: 'bg-blue-500' },
             ];
 
             const projects = [
                 {
-                    title: "BioTrack iOS",
+                    title: "ADHD Timer",
                     category: "iOS",
-                    stack: ["SwiftUI", "Symfony API"],
-                    description: "Health monitoring for professional esports. Focused on micro-adjustments in training regimens.",
-                    metrics: "98% retention"
+                    stack: ["Expo"],
+                    description: "Utilizes non-agressive colors, mild haptic feedback, and a number-free interface to accommodate those prone to time-blindness, and stay on top of their schedule.",
+                    metrics: "Coming soon"
                 },
-                {
-                    title: "SaaS Engine",
-                    category: "Web",
-                    stack: ["Symfony", "React"],
-                    description: "Headless CMS specialized for local news. Managed 200+ distinct micro-sites with high throughput.",
-                    metrics: "0.4s load time"
-                }
             ];
 
             const filteredProjects = activeTab.toLowerCase() === 'all' 
@@ -126,9 +119,9 @@
                                     <Icon name="chevron-right" size={18} />
                                 </a>
                                 <div className="flex items-center space-x-6 px-4">
-                                    <a href="https://github.com/isaacjstriker" target="_blank" rel="noopener noreferrer"><Icon name="github" className="text-slate-500 hover:text-white cursor-pointer transition-colors" /></a>
-                                    <a href="https://www.linkedin.com/in/isaac-striker-a66921380/" target="_blank" rel="noopener noreferrer"><Icon name="linkedin" className="text-slate-500 hover:text-white cursor-pointer transition-colors" /></a>
-                                    <a href="mailto:local.lapel555@passmail.net"><Icon name="mail" className="text-slate-500 hover:text-white cursor-pointer transition-colors" /></a>
+                                    <a href="https://github.com/isaacjstriker" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="github" className="text-slate-500 group-hover:text-indigo-400" /></a>
+                                    <a href="https://www.linkedin.com/in/isaac-striker-a66921380/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="linkedin" className="text-slate-500 group-hover:text-indigo-400" /></a>
+                                    <a href="mailto:local.lapel555@passmail.net" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="mail" className="text-slate-500 group-hover:text-indigo-400" /></a>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +195,7 @@
                         <div className="max-w-6xl mx-auto">
                             <div className="text-center mb-16">
                                 <h2 className="text-3xl font-bold text-white mb-4">Tech Stack</h2>
-                                <p className="text-slate-400">The tools I use for development.</p>
+                                <p className="text-slate-400">Tools I feel the most "at home" with</p>
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                                 {techStack.map((tech, idx) => (
@@ -220,12 +213,12 @@
 
                     {/* Footer */}
                     <footer className="py-20 px-6 text-center border-t border-white/5">
-                        <h2 className="text-4xl font-bold text-white mb-8">Ready to start?</h2>
+                        <h2 className="text-4xl font-bold text-white mb-8">Have an idea?</h2>
                         <a href="mailto:local.lapel555@passmail.net" className="inline-block bg-indigo-600 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-600/20">
-                            Get In Touch
+                            Turn It Into Reality
                         </a>
                         <div className="mt-20 flex justify-center space-x-8 text-slate-500 text-sm">
-                            <a href="https://github.com/isaacjstriker" target="_blank" rel="noopener noreferrer"className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="github" size={25} className="text-slate-500 group-hover:text-indigo-400"/></a>
+                            <a href="https://github.com/isaacjstriker" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="github" size={25} className="text-slate-500 group-hover:text-indigo-400"/></a>
                             <a href="https://www.linkedin.com/in/isaac-striker-a66921380/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="linkedin" size={25} className="text-slate-500 group-hover:text-indigo-400"/></a>
                             <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group">
                                 <Icon name="briefcase" size={25} className="text-slate-500 group-hover:text-indigo-400" />
