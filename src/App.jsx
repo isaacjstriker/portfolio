@@ -57,7 +57,13 @@ export default function App() {
                     <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
                         <a href="#projects" className="hover:text-white transition-colors leading-none">Projects</a>
                         <a href="#stack" className="hover:text-white transition-colors leading-none">Stack</a>
-                        <a href="mailto:local.lapel555@passmail.net" className="inline-flex items-center justify-center px-6 py-2 bg-white text-black rounded-full hover:bg-indigo-50 transition-all font-bold h-10 hover:scale-105 active:scale-95 transition-transform">
+                        <a href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = 'mailto:local.lapel555' + '@' + 'passmail.net';
+                        }}
+                        className="inline-flex items-center justify-center px-6 py-2 bg-white text-black rounded-full hover:bg-indigo-50 transition-all font-bold h-10 hover:scale-105 active:scale-95 transition-transform"
+                        >
                             Contact
                         </a>
                     </div>
@@ -95,7 +101,12 @@ export default function App() {
                         <div className="flex items-center space-x-6 px-4">
                             <a href="https://github.com/isaacjstriker" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="github" className="text-slate-500 group-hover:text-indigo-400" /></a>
                             <a href="https://www.linkedin.com/in/isaac-striker-a66921380/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="linkedin" className="text-slate-500 group-hover:text-indigo-400" /></a>
-                            <a href="mailto:local.lapel555@passmail.net" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="mail" className="text-slate-500 group-hover:text-indigo-400" /></a>
+                            <a href="#"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = 'mailto:local.lapel555' + '@' + 'passmail.net';
+                            }} 
+                            className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="mail" className="text-slate-500 group-hover:text-indigo-400" /></a>
                         </div>
                     </div>
                 </div>
@@ -187,7 +198,11 @@ export default function App() {
             {/* Footer */}
             <footer className="py-20 px-6 text-center border-t border-white/5">
                 <h2 className="text-4xl font-bold text-white mb-8">Have an idea?</h2>
-                <a href="mailto:local.lapel555@passmail.net" className="inline-block bg-indigo-600 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-600/20">
+                <a href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = 'mailto:local.lapel555' + '@' + 'passmail.net';
+                        }} className="inline-block bg-indigo-600 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-600/20">
                     Turn It Into Reality
                 </a>
                 <div className="mt-20 flex justify-center space-x-8 text-slate-500 text-sm">
