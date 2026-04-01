@@ -111,11 +111,9 @@ export default function App() {
                 </div>
 
                 <div className="max-w-4xl mx-auto relative z-10">
-                    
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-8 leading-[1.1]">
                         Programmer,<br />Reading Enthusiast,<br /><span className="text-gradient">Nerd.</span>
                     </h1>
-                    
                     <p className="text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
                         I learned programming and computer science to solve my own problems.
                         <span className="text-gradient font-medium"> Now, I use it to solve yours. </span>
@@ -124,7 +122,6 @@ export default function App() {
                         I've continued to learn and build. I've had the privilege of taking on several clients, and creating custom
                         software to fit their needs. 
                     </p>
-
                     <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                         <a href="#projects" className="flex items-center justify-center space-x-2 bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-2xl font-bold transition-all">
                             <span>Explore Work</span>
@@ -141,6 +138,8 @@ export default function App() {
                             className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="mail" className="text-slate-500 group-hover:text-indigo-400" /></a>
                         </div>
                     </div>
+                    <br />
+                    <p className="text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">Click <a className="text-gradient" href="https://drive.google.com/file/d/1OJUyQNULrBrlv4bYspoznf3oMCQhfa9u/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a> to view my resume</p>
                 </div>
             </section>
 
@@ -242,7 +241,7 @@ export default function App() {
                 <div className="mt-20 flex justify-center space-x-8 text-slate-500 text-sm">
                     <a href="https://github.com/isaacjstriker" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="github" size={25} className="text-slate-500 group-hover:text-indigo-400"/></a>
                     <a href="https://www.linkedin.com/in/isaac-striker-a66921380/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="linkedin" size={25} className="text-slate-500 group-hover:text-indigo-400"/></a>
-                    <a href="../portfolio/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group" download>
+                    <a href="../portfolio/public_resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group" download>
                         <Icon name="briefcase" size={25} className="text-slate-500 group-hover:text-indigo-400" />
                     </a>
                 </div>
