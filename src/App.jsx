@@ -34,7 +34,40 @@ export default function App() {
 
     const projects = [
         {
-            title: "ADHD Timer",
+            title: "Convapp",
+            href: "https://github.com/isaacjstriker/convapp",
+            category: "Web",
+            stack: ["Python", "Flask"],
+            description: "Custom web app for converting XLSX exports into CSVs compatible with a proprietary system, using the pandas library for validation and transformation.",
+            metrics: "Automated the migration of ~25,000 rows of territory data"
+        },
+        {
+            title: "Custom Blog Site (Aero Construction LLC)",
+            href: "https://aeroconstructionvt.com/",
+            category: "Web",
+            stack: ["Vue.js"],
+            description: "Created a custom blog application for a local, private airplane construction business using a Postgres database and deployed on Render.",
+            metrics: "Landed more clicks and calls"
+        },
+        {
+            title: "Landing Page (Precision Motorworks LLC)",
+            href: "https://motorworksvt.com/",
+            category: "Web",
+            stack: ["HTML", "CSS"],
+            description: "Designed a landing page for a local auto-shop using HTML and CSS.",
+            metrics: "New email inquiries through website"
+        },
+        {
+            title: "Notris",
+            href: "https://notris-online.onrender.com/",
+            category: "Web",
+            stack: ["Go", "JavaScript"],
+            description: "Multiplayer Tetris‑style game with a Go backend and JavaScript frontend, showcasing real‑time WebSocket concurrency.",
+            metrics: "Completed as my capstone project for Boot.dev"
+        },
+        {
+            title: "Orbital",
+            href: "https://medium.com/@strikerisaac480",
             category: "iOS",
             stack: ["Expo"],
             description: "Utilizes non-agressive colors, mild haptic feedback, and a number-free interface to accommodate those prone to time-blindness, and stay on top of their schedule.",
@@ -78,19 +111,18 @@ export default function App() {
                 </div>
 
                 <div className="max-w-4xl mx-auto relative z-10">
-                    <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-indigo-300 mb-8">
-                        <Icon name="sparkles" size={14} className="mr-1" />
-                        <span>Currently pivoting to iOS ecosystem</span>
-                    </div>
                     
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-8 leading-[1.1]">
-                        Engineering Experiences for <span className="text-gradient">High-Engagement</span> Audiences.
+                        Programmer,<br />Reading Enthusiast,<br /><span className="text-gradient">Nerd.</span>
                     </h1>
                     
                     <p className="text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
-                        I build applications to solve real problems in micro-niche markets. 
-                        Two years of expert <span className="text-white font-medium">web development</span> experience, 
-                        now pivoting towards the fluid performance of <span className="text-white font-medium">iOS & Expo</span>.
+                        I learned programming and computer science to solve my own problems.
+                        <span className="text-gradient font-medium"> Now, I use it to solve yours. </span>
+                        During my job search (since completing the backend developer path on 
+                        <a className="text-white font-medium" href="https://www.boot.dev/u/isaacstriker" target="_blank" rel="noopener noreferrer"> Boot.dev</a>), 
+                        I've continued to learn and build. I've had the privilege of taking on several clients, and creating custom
+                        software to fit their needs. 
                     </p>
 
                     <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -116,9 +148,9 @@ export default function App() {
             <section className="py-20 px-6 border-y border-white/5 items-center">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
                     {[
-                        { title: "Micro-Niche Specialist", desc: "Building deeply specialized tools for specific user groups. I leverage my high attention to detail and technical expertise to achieve and iterate on best solutions.", icon: "target" },
-                        { title: "High Engagement", desc: "Optimizing applications for lowest interfacing friction between user and app: real-time feedback, fluid and clear UI.", icon: "zap" },
-                        { title: "Solid Core", desc: "Leveraging best security and encryption practices for safe and stable systems. My four step iterative process is review, research, retest, repeat.", icon: "cpu" }
+                        { title: "Custom Solutions", desc: "Building specialized tools for specific user groups. I leverage my high attention to detail, researching abilities and programming knowledge to achieve and iterate on best solutions.", icon: "target" },
+                        { title: "Practicality First", desc: "Optimizing applications for lowest interfacing friction between user and software. I will sacrifice stunning UI for simplicity. I'm anti-overengineer (if that's a term?)", icon: "zap" },
+                        { title: "Best Practices", desc: "Security and encryption are always top-priority in production systems. My four step iterative process is review, research, retest, repeat.", icon: "cpu" }
                     ].map((item, i) => (
                         <div key={i} className="space-y-4">
                             <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-indigo-400 border border-white/10">
@@ -137,7 +169,7 @@ export default function App() {
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-6 md:space-y-0">
                         <div>
                             <h2 className="text-4xl font-bold text-white mb-4">Portfolio</h2>
-                            <p className="text-slate-400">Selected professional works (85-92)</p>
+                            <p className="text-slate-400">Here's some curated projects. Click on them to learn more.</p>
                         </div>
                         <div className="flex bg-white/5 p-1 rounded-xl border border-white/10">
                             {['All', 'iOS', 'Web'].map(tab => (
@@ -154,22 +186,24 @@ export default function App() {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredProjects.map((project, idx) => (
-                            <div key={idx} className="glass-card rounded-[2rem] p-8 hover:bg-white/[0.06] transition-all group cursor-default">
-                                <div className="flex justify-between items-start mb-6">
-                                    <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-[10px] font-bold uppercase tracking-widest">{project.category}</span>
+                            <a href={project.href} target="_blank" rel="noopener noreferrer">
+                                <div key={idx} className="glass-card rounded-[2rem] p-8 hover:bg-white/[0.06] transition-all group cursor-default">
+                                    <div className="flex justify-between items-start mb-6">
+                                        <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-[10px] font-bold uppercase tracking-widest">{project.category}</span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
+                                    <p className="text-slate-400 text-sm mb-6 leading-relaxed">{project.description}</p>
+                                    <div className="flex flex-wrap gap-2 mb-6">
+                                        {project.stack.map(tag => (
+                                            <span key={tag} className="text-[10px] font-medium px-2 py-1 bg-white/5 border border-white/5 rounded-md text-slate-400 tracking-tight">#{tag}</span>
+                                        ))}
+                                    </div>
+                                    <div className="pt-6 border-t border-white/5 flex items-center text-sm font-bold text-indigo-400">
+                                        <Icon name="activity" size={14} className="mr-2" />
+                                        <span>{project.metrics}</span>
+                                    </div>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
-                                <p className="text-slate-400 text-sm mb-6 leading-relaxed">{project.description}</p>
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {project.stack.map(tag => (
-                                        <span key={tag} className="text-[10px] font-medium px-2 py-1 bg-white/5 border border-white/5 rounded-md text-slate-400 tracking-tight">#{tag}</span>
-                                    ))}
-                                </div>
-                                <div className="pt-6 border-t border-white/5 flex items-center text-sm font-bold text-indigo-400">
-                                    <Icon name="activity" size={14} className="mr-2" />
-                                    <span>{project.metrics}</span>
-                                </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>
@@ -179,8 +213,8 @@ export default function App() {
             <section id="stack" className="py-24 px-6 bg-[#080808]">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-white mb-4">Tech Stack</h2>
-                        <p className="text-slate-400">Tools I feel the most "at home" with</p>
+                        <h2 className="text-3xl font-bold text-white mb-4">Tech I Use</h2>
+                        <p className="text-slate-400">My favorite tools to work with</p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {techStack.map((tech, idx) => (
@@ -197,18 +231,18 @@ export default function App() {
 
             {/* Footer */}
             <footer className="py-20 px-6 text-center border-t border-white/5">
-                <h2 className="text-4xl font-bold text-white mb-8">Have an idea?</h2>
+                <h2 className="text-4xl font-bold text-white mb-8">Work with me!</h2>
                 <a href="#"
                         onClick={(e) => {
                             e.preventDefault();
                             window.location.href = 'mailto:local.lapel555' + '@' + 'passmail.net';
                         }} className="inline-block bg-indigo-600 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-600/20">
-                    Turn It Into Reality
+                    Contact Me
                 </a>
                 <div className="mt-20 flex justify-center space-x-8 text-slate-500 text-sm">
                     <a href="https://github.com/isaacjstriker" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="github" size={25} className="text-slate-500 group-hover:text-indigo-400"/></a>
                     <a href="https://www.linkedin.com/in/isaac-striker-a66921380/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="linkedin" size={25} className="text-slate-500 group-hover:text-indigo-400"/></a>
-                    <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group">
+                    <a href="../portfolio/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group" download>
                         <Icon name="briefcase" size={25} className="text-slate-500 group-hover:text-indigo-400" />
                     </a>
                 </div>
