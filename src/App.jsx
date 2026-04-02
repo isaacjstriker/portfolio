@@ -90,6 +90,7 @@ export default function App() {
                     <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
                         <a href="#projects" className="hover:text-white transition-colors leading-none">Projects</a>
                         <a href="#stack" className="hover:text-white transition-colors leading-none">Stack</a>
+                        <a href="https://medium.com/@strikerisaac480" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors leading-none">Blog</a>
                         <a href="#"
                         onClick={(e) => {
                             e.preventDefault();
@@ -147,9 +148,9 @@ export default function App() {
             <section className="py-20 px-6 border-y border-white/5 items-center">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
                     {[
-                        { title: "Custom Solutions", desc: "Building specialized tools for specific user groups. I leverage my high attention to detail, researching abilities and programming knowledge to achieve and iterate on best solutions.", icon: "target" },
-                        { title: "Practicality First", desc: "Optimizing applications for lowest interfacing friction between user and software. I will sacrifice stunning UI for simplicity. I'm anti-overengineer (if that's a term?)", icon: "zap" },
-                        { title: "Best Practices", desc: "Security and encryption are always top-priority in production systems. My four step iterative process is review, research, retest, repeat.", icon: "cpu" }
+                        { title: "Custom Solutions", desc: "Building specialized that solve specific, real problems. I leverage my high attention to detail, researching abilities and programming knowledge to achieve and iterate on best solutions.", icon: "target" },
+                        { title: "Practicality First", desc: "Optimizing applications for lowest interfacing friction between user and software. I am more concerned about the functionality and practicality of a system than how it looks. I like keeping things as simple as possible, and I'm anti-overengineer.", icon: "zap" },
+                        { title: "Best Practices", desc: "Security and encryption are always top-priority in production systems. I generally keep to a process that consists of reviewing, researching, retesting, repeat.", icon: "cpu" }
                     ].map((item, i) => (
                         <div key={i} className="space-y-4">
                             <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-indigo-400 border border-white/10">
@@ -230,7 +231,7 @@ export default function App() {
 
             {/* Footer */}
             <footer className="py-20 px-6 text-center border-t border-white/5">
-                <h2 className="text-4xl font-bold text-white mb-8">Work with me!</h2>
+                <h2 className="text-4xl font-bold text-white mb-8">Let's work together!</h2>
                 <a href="#"
                         onClick={(e) => {
                             e.preventDefault();
@@ -241,7 +242,7 @@ export default function App() {
                 <div className="mt-20 flex justify-center space-x-8 text-slate-500 text-sm">
                     <a href="https://github.com/isaacjstriker" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="github" size={25} className="text-slate-500 group-hover:text-indigo-400"/></a>
                     <a href="https://www.linkedin.com/in/isaac-striker-a66921380/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group"><Icon name="linkedin" size={25} className="text-slate-500 group-hover:text-indigo-400"/></a>
-                    <a href="../portfolio/public_resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group" download>
+                    <a href="https://drive.google.com/file/d/1OJUyQNULrBrlv4bYspoznf3oMCQhfa9u/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors group">
                         <Icon name="briefcase" size={25} className="text-slate-500 group-hover:text-indigo-400" />
                     </a>
                 </div>
