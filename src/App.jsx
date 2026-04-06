@@ -67,7 +67,7 @@ export default function App() {
         },
         {
             title: "Orbital",
-            href: "https://medium.com/@strikerisaac480",
+            href: "https://strdev.hashnode.dev/",
             category: "iOS",
             stack: ["Expo"],
             description: "Utilizes non-agressive colors, mild haptic feedback, and a number-free interface to accommodate those prone to time-blindness, and stay on top of their schedule.",
@@ -90,7 +90,7 @@ export default function App() {
                     <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
                         <a href="#projects" className="hover:text-white transition-colors leading-none">Projects</a>
                         <a href="#stack" className="hover:text-white transition-colors leading-none">Stack</a>
-                        <a href="https://medium.com/@strikerisaac480" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors leading-none">Blog</a>
+                        <a href="https://strdev.hashnode.dev/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors leading-none">Blog</a>
                         <a href="#"
                         onClick={(e) => {
                             e.preventDefault();
