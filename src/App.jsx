@@ -67,7 +67,7 @@ export default function App() {
         },
         {
             title: "Orbital",
-            href: "https://strdev.hashnode.dev/",
+            href: "https://strdev.hashnode.dev",
             category: "iOS",
             stack: ["Expo"],
             description: "Utilizes non-agressive colors, mild haptic feedback, and a number-free interface to accommodate those prone to time-blindness, and stay on top of their schedule.",
